@@ -1,0 +1,6 @@
+yellow : #FCFF65 : rgba(252,255,101,1)
+blue : #074B9B   : rgba(7,75,155,1)
+black : #000000  : rgba(0,0,0,1)
+smoke : #F5F5F5  : rgba(245,245,245,1)
+
+
