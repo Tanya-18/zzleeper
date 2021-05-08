@@ -5,15 +5,41 @@
 {% endblock css %}
 
 {% block content %}
-    <div class=" px-0 container-fluid" style="height: 50vh;">
-        <div class="yellowBox" style="height: 50vh;">
-            <div class="container">
-                <div class="yellow">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis beatae harum illum, vitae molestiae nulla eos? Laudantium repellat iusto nobis nisi libero distinctio. Vel libero dignissimos hic ratione? Debitis, facere?
+    <div class=" px-0 container-fluid" >
+        <div class="yellowBox">
+            <div class="container">   
+                <div class="maintext">
+                    <h1 class=" font-weight-bolder titletext">
+                        zzleeper
+                    </h1>
+                </div>
+                <div class="image">
+                    <img src="{{url_for('static', filename='images/welcome.svg')}}" alt="welcome-illustration">
                 </div>
             </div>
         </div>
-        
-        
+        <div class="container bottom">
+            <div class="logo-text">
+                <div class="logo-circle">
+                    <img class="logo-image"src="{{url_for('static', filename='images/logo307x307.png')}}" alt="logo">
+                    
+                </div>
+                <div class="sub-text">
+                    <h1 class="nocturnal">FOR THE NOCTURNAL YOU!</h1>
+                </div>
+            </div>
+            <div class="buttons"> 
+                <div class="login">
+                    <form action="{{url_for('login')}}">
+                        <input class="btn01 btn-lg" type="submit" value="Login"/>
+                    </form>
+                </div>
+                <div class="register">
+                    <form action="#">
+                        <input class="btn02 btn-lg" type="submit" value="Register"/>
+                    </form>
+                </div>
+            </div>
+        </div>    
     </div>
 {% endblock %}
