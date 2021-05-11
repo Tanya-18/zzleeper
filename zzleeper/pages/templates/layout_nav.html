@@ -7,7 +7,8 @@
 {% endblock css %}
 
 {% block content %}
-<div class="px-0 container-fluid">
+<div class="px-0 container-fluid">  
+    <div class="bg">
     <div class="navyellow">
         <div class="container">
             <div class="row align-items-start">
@@ -27,19 +28,40 @@
                     </div>
                 </div>
               </div>
-              <!-- <div class="image">
-                <img src="{{url_for('static', filename='images/login.svg')}}" alt="login-illustration">
-            </div> -->
             </div>
-        </div>
-        {% block nav %}
-        {% endblock nav %}
-        
+            <div class="nav-1">
+                <li class="links">
+                    <a href="{{url_for('welcome')}}" class="nav-link">
+                        Home
+                    </a>
+                    <a href="{{url_for('login')}}" class="nav-link">
+                        Login
+                    </a>
+                    <a href="{{url_for('register')}}" class="nav-link">
+                        Register
+                    </a>
+                    <a href="#" class="nav-link">
+                        Admin
+                    </a>
+                    <a href="#" class="nav-link">
+                        About Us
+                    </a>
+                </li>
+            </div>
+        </div>    
      </div>
-     {% block page_content %}
-    {% endblock page_content %}
+        {% block pagecontent %}
+        {% endblock pagecontent %}
+    </div>
 </div> 
 <script src="{{url_for('static', filename='js/layout_nav.js')}}"></script>  
 {% endblock content %}
+
+
+              <!-- <div class="image">
+                <img src="{{url_for('static', filename='images/login.svg')}}" alt="login-illustration">
+            </div> -->
+            <!-- {% block nav %}
+            {% endblock nav %}   -->
 
 
