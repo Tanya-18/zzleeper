@@ -1,0 +1,45 @@
+{% extends "layout1.html"%}
+
+{% block css %}
+    {% block extendedcss %}
+    {% endblock extendedcss %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/layout_nav.css')}}">
+{% endblock css %}
+
+{% block content %}
+<div class="px-0 container-fluid">
+    <div class="navyellow">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col logo-container">
+                    <div class="logo-circle">
+                        <img class="logo-image"src="{{url_for('static', filename='images/logo307x307.png')}}" alt="logo">   
+                    </div>
+                </div>
+               
+              <div class="col maintext">
+                 <h1 class="font-weight-bolder titletext">
+                     zzleeper</h1>
+              </div>
+              <div class="col toggle-col">
+                <div class="menu-btn" onclick="navtoggle()">
+                    <div class="menu-btn_burger">
+                    </div>
+                </div>
+              </div>
+              <!-- <div class="image">
+                <img src="{{url_for('static', filename='images/login.svg')}}" alt="login-illustration">
+            </div> -->
+            </div>
+        </div>
+        {% block nav %}
+        {% endblock nav %}
+        
+     </div>
+     {% block page_content %}
+    {% endblock page_content %}
+</div> 
+<script src="{{url_for('static', filename='js/layout_nav.js')}}"></script>  
+{% endblock content %}
+
+

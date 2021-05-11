@@ -26,7 +26,7 @@ def register():
 @app.route("/login") 
 def login():
     form = LoginForm()
-    return render_template('login.html', title='Login page', form=form)
+    return render_template('layout_nav.html', title='Login page', form=form)
 
 
 
