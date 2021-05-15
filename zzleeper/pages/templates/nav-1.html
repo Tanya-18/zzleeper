@@ -1,14 +1,14 @@
 {% extends "layout_nav.html"%}
 
 {% block extendedcss %}
-    {% block pagecss%}
+    {% block pagecss %}
     {% endblock pagecss %}
-{% endblock entendedcss%}
+{% endblock %}
 
 {% block nav %}
 <div class="nav-1">
     <li class="links">
-        <a href="{{url_for('welcome')}}" class="nav-link">
+        <a href="{{url_for('welcome')}}" class="nav-link" style="padding: 0;">
             Home
         </a>
         <a href="{{url_for('login')}}" class="nav-link">
@@ -25,9 +25,9 @@
         </a>
     </li>
 </div>
-{% endblock nav %}
+{% endblock %}
 
 {% block page_content %}
     {% block page %}
-    {% endblock page %}
-{% endblock page_content %}
+    {% endblock %}
+{% endblock %}

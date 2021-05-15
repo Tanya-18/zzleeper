@@ -3,6 +3,9 @@
     <div class="login-form">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
+            <div class="illus">
+                <img src="{{url_for('static',filename='images/login.svg')}}" alt="login-image">
+            </div>
             <fieldset class="form-group">
 
                 <div class="form-group">

@@ -10,7 +10,7 @@
 <div class="px-0 container-fluid">  
     <div class="bg">
     <div class="navyellow">
-        <div class="container">
+        <!-- <div class="container"> -->
             <div class="row align-items-start">
                 <div class="col logo-container">
                     <div class="logo-circle">
@@ -29,29 +29,11 @@
                 </div>
               </div>
             </div>
-            <div class="nav-1">
-                <li class="links">
-                    <a href="{{url_for('welcome')}}" class="nav-link">
-                        Home
-                    </a>
-                    <a href="{{url_for('login')}}" class="nav-link">
-                        Login
-                    </a>
-                    <a href="{{url_for('register')}}" class="nav-link">
-                        Register
-                    </a>
-                    <a href="#" class="nav-link">
-                        Admin
-                    </a>
-                    <a href="#" class="nav-link">
-                        About Us
-                    </a>
-                </li>
-            </div>
-        </div>    
+        {% block nav %}
+        {% endblock %}
      </div>
         {% block pagecontent %}
-        {% endblock pagecontent %}
+        {% endblock %}
     </div>
 </div> 
 <script src="{{url_for('static', filename='js/layout_nav.js')}}"></script>  
@@ -61,7 +43,6 @@
               <!-- <div class="image">
                 <img src="{{url_for('static', filename='images/login.svg')}}" alt="login-illustration">
             </div> -->
-            <!-- {% block nav %}
-            {% endblock nav %}   -->
+              
 
 
