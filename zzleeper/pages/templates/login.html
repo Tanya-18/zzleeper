@@ -1,5 +1,6 @@
-{% extends "layout1.html"%}
-{% block content %}
+{% extends "nav-1.html"%}
+
+{% block page %}
     <div class="login-form">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
@@ -59,4 +60,4 @@
              <a href="{{ url_for('register')}}">Create New Account</a>
         </small>
     </div>
-{% endblock content %}
+{% endblock %}

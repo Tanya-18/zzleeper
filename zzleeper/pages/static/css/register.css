@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.message-box,
+.already,
+.buttonbox,
+.container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    flex-direction: column;
+    padding-bottom: 2em;
+}
+.message-box,
+.message{
+    align-items: center;
+    margin: right 3.5em;
+    width: 100%;
+}
+.create{
+    padding-top: 1.5em;
+    margin-bottom: 0.8em;
+    text-align: center;
+    font-size: 7.5vw;
+    font-weight: 700;
+    border-bottom: 0.15em solid black;
+    width: fit-content;
+}
+.form-group{
+    padding-top: 1em;
+    width: 80vw;
+}
+.form-horizontal {
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 100vh; */
+    width: 100%;
+}
+.already{
+    width: 100%;
+    margin-top: -1em;
+}
+a{
+    color: black;
+    font-size: 5vw;
+    font-weight: 600;
+}
+.form-control-label{
+    font-size: 5vw;
+    font-weight: 600;
+    padding-bottom: 0.5em;
+    /* margin-left: 0.5em; */
+}
+.form-control-lg{
+    background-color:transparent;
+    border-radius: 0.8em;
+    border: 0.1em solid black;
+}
+.btn{
+    background-color:#FCFF65;
+    border-radius: 0.6em;
+    border: 0.1em solid black;
+    width:40vw;
+    margin-top: 0.5em;
+    font-size: 6vw;
+    font-weight: 600;
+    color: black;
+}
