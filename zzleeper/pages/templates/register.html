@@ -12,12 +12,13 @@
                 <div class="container" style="background-color: transparent;">
                 <div class="message">
                     <div class="message-box">
-                        <h2 class="create"> Create Your Account</h2>
+                        <h2 class="create">Create Your Account!</h2>
                     </div>
                 </div>
                 <form class="form-horizontal", role="form", autocomplete="off", method="POST", action="">
                     {{ form.hidden_tag() }}
-                        <div class="form-group">
+                        <div class="pt-0 form-group">
+                            {{ form.email.label(class="form-control-label")}}
                         {% if form.email.errors %}
                                 {{ form.email(class="form-control form-control-lg is-invalid")}}
                                 <div class="invalid-feedback">
@@ -28,7 +29,7 @@
                                     {% endfor %}
                                 </div>
                             {% else %}
-                                {{ form.email(class="form-control form-control-lg")}}
+                                {{ form.email(class="form-control form-control-lg", placeholder="name@abc.com")}}
                             {% endif %}                
                     
                         </div>
@@ -44,7 +45,7 @@
                                 {% endfor %}
                             </div>
                         {% else %}
-                            {{ form.username(class="form-control form-control-lg")}}
+                            {{ form.username(class="form-control form-control-lg", placeholder="Enter your Username")}}
                         {% endif %}
 
                 </div>
@@ -59,7 +60,7 @@
                                 {% endfor %}
                             </div>
                         {% else %}
-                            {{ form.password(class="form-control form-control-lg")}}
+                            {{ form.password(class="form-control form-control-lg", placeholder="Enter a strong password")}}
                         {% endif %}
                 </div>
 
@@ -73,16 +74,14 @@
                             {% endfor %}
                             </div>
                         {% else %}
-                            {{ form.confirm_password(class="form-control form-control-lg")}}
+                            {{ form.confirm_password(class="form-control form-control-lg", placeholder="Confirm your password")}}
                         {% endif %}
                 </div>
             <!-- </fieldset> -->
-            <div class="form-group">
+            <div class="buttonbox form-group">
                 {{form.submit(class="btn btn-outline-info")}}
             </div>
-
         </form>
-    
     <div class="already">
         <small class="text-muted">
              <a href="{{ url_for('login')}}">Already Have An Account?</a>

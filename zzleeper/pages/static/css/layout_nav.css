@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     background-color:whitesmoke;
@@ -33,7 +34,7 @@ body{
 }
 .titletext{
     font-size: 11vw;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 800;
 }
 .container-fluid{
