@@ -1,14 +1,24 @@
 {% extends "nav-1.html"%}
 
+{% block pagecss %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock pagecss %}
+
 {% block page %}
     <div class="login-form">
-        <form method="POST" action="">
-            {{ form.hidden_tag() }}
-            <div class="illus">
-                <img src="{{url_for('static',filename='images/login.svg')}}" alt="login-image">
-            </div>
-            <fieldset class="form-group">
-
+        <!-- <form method="POST" action="">
+            {{ form.hidden_tag() }} -->
+            
+            <!-- <fieldset class="form-group"> -->
+                <div class="container" style="background-color: transparent;">
+                    <div class="welcome-text">
+                        <h2 class="welcome">Welcome Back!</h2>
+                    </div>
+                        <div class="illus">
+                            <img class="login-img"src="{{url_for('static',filename='images/login.svg')}}" alt="login-image">
+                        </div>
+                    <form class="form-horizontal", role="form", autocomplete="off", method="POST", action="">
+                        {{ form.hidden_tag() }}
                 <div class="form-group">
                     {{ form.email.label(class="form-control-label")}}
 
@@ -20,7 +30,7 @@
                                 {% endfor %}
                             </div>
                         {% else %}
-                            {{ form.email(class="form-control form-control-lg")}}
+                            {{ form.email(class="form-control form-control-lg", placeholder="Enter your email")}}
                         {% endif %}                
                     
                 </div>
@@ -35,7 +45,7 @@
                                 {% endfor %}
                             </div>
                         {% else %}
-                            {{ form.password(class="form-control form-control-lg")}}
+                            {{ form.password(class="form-control form-control-lg", placeholder="Enter your password")}}
                         {% endif %}
                 </div>
 
@@ -44,20 +54,28 @@
                     {{ form.remember.label(class="form-check-label") }}
                 </div>
 
-            </fieldset>
-            <div class="form-group">
+            <!-- </fieldset> -->
+            <div class="loginbutton form-group">
                 {{form.submit(class="btn btn-outline-info")}}
             </div>
 
-            <small class="text-muted ml-2">
+            <!-- <small class="text-muted ml-2">
+                <a href="#">Forgot Password?</a>
+            </small> -->
+
+        <!-- </form> -->
+        <div class="container-bottom">
+            <small class="text-muted">
+                <a href="{{ url_for('register')}}">Create 
+                    New 
+                    Account</a>
+           </small>
+            <small class="forgot text-muted ml-2">
                 <a href="#">Forgot Password?</a>
             </small>
-
-        </form>
-    </div>
-    <div class="create-new">
-        <small class="text-muted">
-             <a href="{{ url_for('register')}}">Create New Account</a>
-        </small>
-    </div>
+            
+        </div>
+            </div>
+        </div>
+   
 {% endblock %}
